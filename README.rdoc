@@ -1,0 +1,7 @@
+= people
+
+Description goes here.
+
+== Copyright
+
+Copyright (c) 2009 Matthew Ericson. See LICENSE for details.
