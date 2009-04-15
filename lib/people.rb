@@ -1,12 +1,15 @@
 module People
-  
+
   class NameParser
 
+
+    attr_reader :seen, :parsed
+
     def initialize( opts={} )
-      
+
       @name_chars = "A-Za-z0-9\\-\\'"
       @nc = @name_chars
-      
+
       @opts = {
         :strip_mr   => true,
         :strip_mrs  => false,
@@ -148,6 +151,8 @@ module People
 
       out[:orig]  = name.dup
 
+      name = name.dup
+
       name = clean( name )
 
       # strip trailing suffices
@@ -170,7 +175,7 @@ module People
       if @opts[:couples]
         name.gsub!( / +and +/i, " \& " )
       end
-      
+
 
 
       if @opts[:couples] && name.match( /\&/ )
@@ -298,7 +303,7 @@ module People
       @titles.each do |title|
         title_p = Regexp.new( "^(#{title})(.+)", true )
         if m = name.match( title_p )
-          
+
           title = m[1]
           name.replace( m[-1].strip )
           return title
@@ -450,7 +455,7 @@ module People
       # Exclude names ending in a,c,i,o,z or j, typically Polish or Italian
 
       if fixed.match( /\bMac[a-z]{2,}[^a|c|i|o|z|j]\b/i  )
-        
+
         fixed.gsub!( /\b(Mac)([a-z]+)/i ) do |m|
           $1 + $2.capitalize
         end
