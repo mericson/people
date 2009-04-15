@@ -1,10 +1,11 @@
 module People
 
+  # Class to parse names into their components like first, middle, last, etc.
   class NameParser
-
 
     attr_reader :seen, :parsed
 
+    # Creates a name parsing object
     def initialize( opts={} )
 
       @name_chars = "A-Za-z0-9\\-\\'"
