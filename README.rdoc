@@ -1,6 +1,6 @@
 = people
 
-Description goes here.
+Parses names.
 
 == Copyright
 
