@@ -1,6 +1,10 @@
 = people
 
-Parses names into parts. Loosely based on the <a href="http://search.cpan.org/dist/Lingua-EN-NameParse/lib/Lingua/EN/NameParse.pm">Lingua-EN-NameParser</a> Perl module.
+Parses names into parts. Loosely based on the Lingua-EN-NameParser Perl module.
+
+= How to install
+
+  sudo gem install people
 
 = How to use
 
@@ -36,7 +40,6 @@ If you have names like "John and Jane Doe", pass :couples => true
 Try it out online at http://people.ericson.net 
 
 Send suggestions to mericson at ericson dot net.
-
 
 == Copyright
 
