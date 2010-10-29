@@ -41,6 +41,7 @@ Try it out online at http://people.ericson.net
 
 Send suggestions to mericson at ericson dot net.
 
+
 == Copyright
 
 Copyright (c) 2009 Matthew Ericson. See LICENSE for details.
