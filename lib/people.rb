@@ -236,6 +236,7 @@ module People
 
       if @opts[:case_mode] == 'proper'
         [ :title, :first, :middle, :last, :suffix, :clean, :first2, :middle2, :title2, :suffix2 ].each do |part|
+          next if part == :suffix && out[part].match( /^[iv]+$/i );
           out[part] = proper( out[part] )
         end
 
