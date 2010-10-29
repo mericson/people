@@ -1,6 +1,6 @@
 = people
 
-Parses names into parts. Loosely based on the Lingua-EN-NameParser Perl module.
+Parses names into parts. Loosely based on the <a href="http://search.cpan.org/dist/Lingua-EN-NameParse/lib/Lingua/EN/NameParse.pm">Lingua-EN-NameParser</a> Perl module.
 
 = How to use
 
@@ -16,7 +16,7 @@ Parses names into parts. Loosely based on the Lingua-EN-NameParser Perl module.
 
 If name successfully parses, name[:parsed] is set to true.
 
-Available parts are :title, :first, :middle, :last, :suffix, :clean, :first2, :middle2, :title2, :suffix2
+Available parts are :title, :first, :middle, :last, :suffix, :first2, :middle2, :title2, :suffix2, :orig, :match_type
 
 By default, it will try to proper case names. If you want to leave the capitalization alone, pass :case_mode => 'leave' or for uppercase, 'upper'.
 
@@ -33,9 +33,10 @@ If you have names like "John and Jane Doe", pass :couples => true
   puts name[:first2]
   puts name[:last]
 
-YMMV.
+Try it out online at http://people.ericson.net 
 
-More details at http://people.ericson.net
+Send suggestions to mericson at ericson dot net.
+
 
 == Copyright
 
